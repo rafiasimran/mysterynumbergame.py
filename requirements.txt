@@ -1,1 +1,1 @@
-streamlit
+streamlit>=1.27  # st.rerun() was added in 1.27
