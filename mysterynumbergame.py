@@ -59,9 +59,14 @@ if st.button("Submit Guess"):
         else:
             # st.success shows a green message box.
             st.success(f"CORRECT! The number was {st.session_state.secret_number}.")
-            st.info(f"It took you {st.session_state.attempts} attempts.")
+            # Say "attempt" for 1 and "attempts" for everything else.
+            word = "attempt" if st.session_state.attempts == 1 else "attempts"
+            st.info(f"It took you {st.session_state.attempts} {word}.")
             # Mark the game as over in memory.
             st.session_state.game_over = True
+
+# Show how many guesses have been made so far.
+st.caption(f"Guesses so far: {st.session_state.attempts}")
 
 # --- 5. RESET BUTTON ---
 
