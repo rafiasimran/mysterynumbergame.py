@@ -4,6 +4,15 @@ A small web game built with Python and Streamlit: the app picks a number between
 
 I built it to learn how Streamlit handles state. Every button click re-runs the whole script, so the secret number, the attempt counter and the game-over flag all live in `st.session_state`, which keeps them across reruns. The code is commented line by line as a learning reference.
 
+## How to play
+
+1. Type a number from 1 to 20 and click **Submit Guess**.
+2. The game tells you if your guess is too low or too high.
+3. Keep guessing until you get it. The counter shows how many tries you've used.
+4. When you find the number, click **Play Again** to start a new round with a new number.
+
+Tip: start in the middle (10). Each hint cuts the remaining range roughly in half, so you should never need more than 5 guesses.
+
 ## Features
 
 - Guess input limited to 1–20
